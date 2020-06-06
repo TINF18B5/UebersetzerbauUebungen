@@ -1,0 +1,19 @@
+{
+  a = 2;
+  PRINT a;
+  a = a - 7 - 3;
+  b = a + 15;
+  PRINT b;
+  WHILE (a) {
+    PRINT a;
+    a = a + 1;
+  }
+  FOR(c = 10; c > 2; c = c - 1;) {
+    PRINT c;
+    IF (c > 5) {
+      PRINT b;
+    } ELSE IF (a == 0) {
+      PRINT a;
+    }
+  }
+}

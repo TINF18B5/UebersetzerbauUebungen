@@ -1,0 +1,210 @@
+$IN
+{
+  FOR (i = 10; i; i = i - 1;) {
+    PRINT i;
+  }
+}
+$OUT
+10
+9
+8
+7
+6
+5
+4
+3
+2
+1
+$IN
+{
+  FOR (i = 0-20; i + 10; i = i + 2;) {
+    PRINT i;
+  }
+}
+$OUT
+-20
+-18
+-16
+-14
+-12
+$IN
+{
+  FUNCTION fct() {
+    PRINT 10;
+  }
+  CALL fct();
+  CALL fct();
+}
+$OUT
+10
+10
+$IN
+{
+  FUNCTION fct(a) {
+    PRINT a;
+  }
+  CALL fct(2);
+  CALL fct(2+2);
+}
+$OUT
+2
+4
+$IN
+{
+  a = 5;
+  b = 7;
+  FUNCTION fct(x, y, z) {
+    PRINT x;
+	PRINT y;
+	PRINT z;
+	PRINT x + y + z;
+  }
+  CALL fct(1, 2, 3);
+  CALL fct(a, b, a);
+}
+$OUT
+1
+2
+3
+6
+5
+7
+5
+17
+$IN
+{
+  IF(0) {
+    PRINT 0;
+  }
+  IF(1) {
+    PRINT 1;
+  }
+}
+$OUT
+1
+$IN
+{
+  a = 0;
+  IF(a) {
+    PRINT 0;
+  } ELSE {
+    PRINT 1;
+  }
+  a = 1;
+  IF(a) {
+    PRINT 0;
+  } ELSE {
+    PRINT 1;
+  }
+}
+$OUT
+1
+0
+$IN
+{
+  a = 0;
+  b = 1;
+  IF(a) {
+    PRINT 0;
+  } ELSE IF (b) {
+    PRINT 1;
+  } ELSE {
+    PRINT 2;
+  }
+}
+$OUT
+1
+$IN
+{
+  a = 10;
+  WHILE(a) {
+    PRINT a;
+    a = a - 1;
+  }
+}
+$OUT
+10
+9
+8
+7
+6
+5
+4
+3
+2
+1
+$IN
+{
+  b = 5;
+  DO {
+    PRINT b;
+  } WHILE(b-5);
+}
+$OUT
+5
+$IN
+{
+  c = 10;
+  WHILE(c) {
+    PRINT c;
+    c = c - 2;
+    d = 9;
+    DO {
+      PRINT d;
+      d = d - 3;
+    } WHILE(d-3);
+  }
+}
+$OUT
+10
+9
+6
+8
+9
+6
+6
+9
+6
+4
+9
+6
+3
+9
+6
+$IN
+{
+  x = 4 < 7;
+  PRINT x;
+}
+$OUT
+1
+$IN
+{
+  a = 3;
+  b = 4;
+  x = a == b;
+  PRINT x;
+}
+$OUT
+0
+$IN
+{
+  x = 3 < 2+2;
+  PRINT x;
+}
+$OUT
+1
+$IN
+{
+  x = 1 && (1 || 0);
+  PRINT x;
+}
+$OUT
+1
+$IN
+{
+  x = 3 > 4 && 1;
+  PRINT x;
+}
+$OUT
+0

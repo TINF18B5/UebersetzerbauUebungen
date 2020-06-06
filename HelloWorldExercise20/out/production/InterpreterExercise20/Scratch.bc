@@ -1,0 +1,111 @@
+Classfile /C:/Users/Timo Klenk/Documents/Projects/SourceTree/Studium/Compilerbau/Aufgaben/HelloWorldExercise20/out/production/InterpreterExercise20/Scratch.class
+  Last modified Jun 4, 2020; size 645 bytes
+  MD5 checksum 1b9dd5b3739d1fd27e24edd84b990df8
+  Compiled from "Scratch.java"
+class Scratch
+  minor version: 0
+  major version: 52
+  flags: ACC_SUPER
+Constant pool:
+   #1 = Methodref          #6.#27         // java/lang/Object."<init>":()V
+   #2 = Methodref          #5.#28         // Scratch.print:(I)V
+   #3 = Fieldref           #29.#30        // java/lang/System.out:Ljava/io/PrintStream;
+   #4 = Methodref          #31.#32        // java/io/PrintStream.println:(I)V
+   #5 = Class              #33            // Scratch
+   #6 = Class              #34            // java/lang/Object
+   #7 = Utf8               <init>
+   #8 = Utf8               ()V
+   #9 = Utf8               Code
+  #10 = Utf8               LineNumberTable
+  #11 = Utf8               LocalVariableTable
+  #12 = Utf8               this
+  #13 = Utf8               LScratch;
+  #14 = Utf8               main
+  #15 = Utf8               ([Ljava/lang/String;)V
+  #16 = Utf8               args
+  #17 = Utf8               [Ljava/lang/String;
+  #18 = Utf8               a
+  #19 = Utf8               I
+  #20 = Utf8               b
+  #21 = Utf8               c
+  #22 = Utf8               print
+  #23 = Utf8               (I)V
+  #24 = Utf8               i
+  #25 = Utf8               SourceFile
+  #26 = Utf8               Scratch.java
+  #27 = NameAndType        #7:#8          // "<init>":()V
+  #28 = NameAndType        #22:#23        // print:(I)V
+  #29 = Class              #35            // java/lang/System
+  #30 = NameAndType        #36:#37        // out:Ljava/io/PrintStream;
+  #31 = Class              #38            // java/io/PrintStream
+  #32 = NameAndType        #39:#23        // println:(I)V
+  #33 = Utf8               Scratch
+  #34 = Utf8               java/lang/Object
+  #35 = Utf8               java/lang/System
+  #36 = Utf8               out
+  #37 = Utf8               Ljava/io/PrintStream;
+  #38 = Utf8               java/io/PrintStream
+  #39 = Utf8               println
+{
+  Scratch();
+    descriptor: ()V
+    flags:
+    Code:
+      stack=1, locals=1, args_size=1
+         0: aload_0
+         1: invokespecial #1                  // Method java/lang/Object."<init>":()V
+         4: return
+      LineNumberTable:
+        line 1: 0
+      LocalVariableTable:
+        Start  Length  Slot  Name   Signature
+            0       5     0  this   LScratch;
+
+  public static void main(java.lang.String[]);
+    descriptor: ([Ljava/lang/String;)V
+    flags: ACC_PUBLIC, ACC_STATIC
+    Code:
+      stack=2, locals=4, args_size=1
+         0: iconst_1
+         1: istore_1
+         2: iconst_2
+         3: istore_2
+         4: bipush        42
+         6: istore_3
+         7: iload_1
+         8: iload_2
+         9: iadd
+        10: iload_3
+        11: iadd
+        12: invokestatic  #2                  // Method print:(I)V
+        15: return
+      LineNumberTable:
+        line 4: 0
+        line 5: 2
+        line 6: 4
+        line 8: 7
+        line 9: 15
+      LocalVariableTable:
+        Start  Length  Slot  Name   Signature
+            0      16     0  args   [Ljava/lang/String;
+            2      14     1     a   I
+            4      12     2     b   I
+            7       9     3     c   I
+
+  public static void print(int);
+    descriptor: (I)V
+    flags: ACC_PUBLIC, ACC_STATIC
+    Code:
+      stack=2, locals=1, args_size=1
+         0: getstatic     #3                  // Field java/lang/System.out:Ljava/io/PrintStream;
+         3: iload_0
+         4: invokevirtual #4                  // Method java/io/PrintStream.println:(I)V
+         7: return
+      LineNumberTable:
+        line 12: 0
+        line 13: 7
+      LocalVariableTable:
+        Start  Length  Slot  Name   Signature
+            0       8     0     i   I
+}
+SourceFile: "Scratch.java"

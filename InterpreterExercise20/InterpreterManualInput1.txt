@@ -1,0 +1,16 @@
+{
+  a = 1;
+  b = 1;
+  n = 10;
+  WHILE (n) {
+    PRINT a;
+    newB = a + b;
+    a = b;
+    b = newB;
+    n = n - 1;
+  }
+
+  FOR (d = 10; d; d = d - 1;) {
+      PRINT d;
+  }
+}
