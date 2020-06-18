@@ -1,0 +1,24 @@
+{
+  PRINT 2;
+  FUNCTION fct(a, b) {
+    PRINT a;
+    PRINT b;
+  }
+  CALL fct(4, 6);
+  CALL fct(10, 12);
+
+  x = 1;
+  DO {
+      x = x + 10;
+      PRINT x;
+
+  } WHILE x < 100 && x < 100;
+
+
+  PRINT 1 & 1 | 0;
+  PRINT 1 | 0 & 1;
+
+  FUNCTION a() PRINT 1;
+
+  CALL a();
+}
